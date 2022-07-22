@@ -5,11 +5,11 @@
         "version": "1.0.0",
         "orientation": "default",
         "icon": "./assets/icon.png",
-        "backgroundColor": "#f8c9c0",
+        "backgroundColor": "#f4eae6",
         "splash": {
             "image": "./assets/splash.png",
-            "resizeMode": "contain",
-            "backgroundColor": "#f8c9c0"
+            "resizeMode": "cover",
+            "backgroundColor": "#f4eae6"
         },
         "updates": {
             "fallbackToCacheTimeout": 0
@@ -19,14 +19,16 @@
         ],
         "ios": {
             "buildNumber": "1.0.0",
-            "supportsTablet": true
+            "supportsTablet": true,
+            "bundleIdentifier": "com.shadowclone.foodie"
         },
         "android": {
             "versionCode": 1,
             "adaptiveIcon": {
                 "foregroundImage": "./assets/adaptive-icon.png",
-                "backgroundColor": "#f8c9c0"
-            }
+                "backgroundColor": "#f4eae6"
+            },
+            "package": "com.shadowclone.foodie"
         },
         "web": {
             "favicon": "./assets/favicon.png"

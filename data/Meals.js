@@ -1,60 +1,63 @@
-import Theme from "./Theme";
+import { colors } from "../Theme";
 
-class Category {
-    constructor(id, name, color) {
+class Category{
+    constructor(id,name,color){
         this.id = id;
         this.name = name;
         this.color = color;
     }
 }
 
+export const CATEGORIES = [
+    new Category('c1', 'Italian', colors.dother), //'#f5428d'
+    new Category('c2', 'Quick & Easy', colors.medium),//'#f54242'
+    new Category('c3', 'Hamburgers',"#f5a442"), //'#f5a442', 
+    new Category('c4', 'German', colors.ltil), //'#f5d142', 
+    new Category('c5', 'Light & Lovely', colors.lpurp), //'#368dff', 
+    new Category('c6', 'Exotic', colors.lpink), //'#41d95d', 
+    new Category('c7', 'Breakfast', colors.llblue), //'#9eecff', 
+    new Category('c8', 'Asian', colors.lyell), //'#b9ffb0', 
+    new Category('c9', 'French', '#ffc7ff'), //'#ffc7ff', 
+    new Category('c10', 'Summer', '#9eecff'), //'#47fced'
+
+ ];
+
+
 class Meal {
-    constructor(
-        id,
-        categoryIds,
-        title,
-        affordability,
-        complexity,
-        imageUrl,
-        duration,
-        ingredients,
-        steps,
-        isGlutenFree,
-        isVegan,
-        isVegetarian,
-        isLactoseFree
-    ) {
-        this.id = id;
-        this.categoryIds = categoryIds;
-        this.title = title;
-        this.imageUrl = imageUrl;
-        this.ingredients = ingredients;
-        this.steps = steps;
-        this.duration = duration;
-        this.complexity = complexity;
-        this.affordability = affordability;
-        this.isGlutenFree = isGlutenFree;
-        this.isVegan = isVegan;
-        this.isVegetarian = isVegetarian;
-        this.isLactoseFree = isLactoseFree;
-    }
+  constructor(
+    id,
+    categoryIds,
+    title,
+    affordability,
+    complexity,
+    imageUrl,
+    duration,
+    ingredients,
+    steps,
+    isGlutenFree,
+    isVegan,
+    isVegetarian,
+    isLactoseFree
+  ) {
+    this.id = id;
+    this.categoryIds = categoryIds;
+    this.title = title;
+    this.imageUrl = imageUrl;
+    this.ingredients = ingredients;
+    this.steps = steps;
+    this.duration = duration;
+    this.complexity = complexity;
+    this.affordability = affordability;
+    this.isGlutenFree = isGlutenFree;
+    this.isVegan = isVegan;
+    this.isVegetarian = isVegetarian;
+    this.isLactoseFree = isLactoseFree;
+  }
 }
 
 
-const catitems = [
-    new Category('c1', 'Italian', '#f5428d'),
-    new Category('c2', 'Quick & Easy', '#f54242'),
-    new Category('c3', 'Hamburgers', '#f5a442'),
-    new Category('c4', 'German', '#f5d142'),
-    new Category('c5', 'Light & Lovely', '#368dff'),
-    new Category('c6', 'Exotic', '#41d95d'),
-    new Category('c7', 'Breakfast', '#9eecff'),
-    new Category('c8', 'Asian', '#b9ffb0'),
-    new Category('c9', 'French', '#ffc7ff'),
-    new Category('c10', 'Summer', '#47fced')
-];
 
-const meals = [
+export const MEALS = [
     new Meal(
         'm1', ['c1', 'c2'],
         'Spaghetti with Tomato Sauce',
@@ -345,5 +348,5 @@ const meals = [
         true
     )
 ];
-export default catitems
-export { meals }
+
+export const favmeals=[];
